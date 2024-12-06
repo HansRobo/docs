@@ -1191,8 +1191,12 @@ on:
         type: boolean
       environment:
         description: 'Environment to run tests against'
-        type: environment
         required: true
+        default: github-pages
+        type: choice
+        options:
+        - github-pages
+        - staging 
 
 jobs:
   log-the-inputs:
